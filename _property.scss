@@ -1,0 +1,377 @@
+$propertys: (
+  // Display utilities
+  'overflow': (
+    property: overflow,
+    values: auto hidden visible,
+  ),
+  'overflow-x': (
+    property: overflow-x,
+    values: auto hidden,
+  ),
+  'overflow-y': (
+    property: overflow-y,
+    values: auto hidden,
+  ),
+  'display': (
+    property: display,
+    class: d,
+    values: none inline inline-block block table table-row table-cell flex inline-flex,
+  ),
+  'float': (
+    property: float,
+    class: float,
+    values: none left right,
+  ),
+  'box-sizing': (
+    property: box-sizing,
+    class: box,
+    values: (
+      border: border-box,
+      content: content-box
+    ),
+  ),
+  // Flex utilities
+  'flex': (
+    property: flex,
+    values: (
+      fill: 1 1 auto,
+    ),
+  ),
+  'flex-direction': (
+    property: flex-direction,
+    class: flex,
+    values: row column row-reverse column-reverse,
+  ),
+  'flex-grow': (
+    property: flex-grow,
+    class: flex,
+    values: (
+      grow-0: 0,
+      grow-1: 1,
+    ),
+  ),
+  'flex-shrink': (
+    property: flex-shrink,
+    class: flex,
+    values: (
+      shrink-0: 0,
+      shrink-1: 1,
+    ),
+  ),
+  'flex-wrap': (
+    property: flex-wrap,
+    class: flex,
+    values: wrap nowrap wrap-reverse,
+  ),
+  'justify-content': (
+    property: justify-content,
+    class: justify,
+    values: (
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      space-between: space-between,
+      space-around: space-around,
+    ),
+  ),
+  'align-items': (
+    property: align-items,
+    class: align,
+    values: (
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      baseline: baseline,
+      stretch: stretch,
+    ),
+  ),
+  'align-content': (
+    property: align-content,
+    values: (
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      space-between: space-between,
+      space-around: space-around,
+      stretch: stretch,
+    ),
+  ),
+  'align-self': (
+    property: align-self,
+    values: (
+      auto: auto,
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      baseline: baseline,
+      stretch: stretch,
+    ),
+  ),
+  'order': (
+    property: order,
+    values: (
+      first: -1,
+      0: 0,
+      1: 1,
+      2: 2,
+      3: 3,
+      4: 4,
+      5: 5,
+      6: 6,
+      7: 7,
+      8: 8,
+      9: 9,
+      10: 10,
+      11: 11,
+      12: 12,
+      last: 13,
+    ),
+  ),
+  // Margin utilities
+  'margin': (
+    property: margin,
+    class: ma,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'margin-x': (
+    property: margin-right margin-left,
+    class: mx,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'margin-y': (
+    property: margin-top margin-bottom,
+    class: my,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'margin-top': (
+    property: margin-top,
+    class: mt,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'margin-right': (
+    property: margin-right,
+    class: mr,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'margin-bottom': (
+    property: margin-bottom,
+    class: mb,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  'margin-left': (
+    property: margin-left,
+    class: ml,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  // Padding utilities
+  'padding': (
+    property: padding,
+    class: pa,
+    values: $spacers,
+  ),
+  'padding-x': (
+    property: padding-right padding-left,
+    class: px,
+    values: $spacers,
+  ),
+  'padding-y': (
+    property: padding-top padding-bottom,
+    class: py,
+    values: $spacers,
+  ),
+  'padding-top': (
+    property: padding-top,
+    class: pt,
+    values: $spacers,
+  ),
+  'padding-right': (
+    property: padding-right,
+    class: pr,
+    values: $spacers,
+  ),
+  'padding-bottom': (
+    property: padding-bottom,
+    class: pb,
+    values: $spacers,
+  ),
+  'padding-left': (
+    property: padding-left,
+    class: pl,
+    values: $spacers,
+  ),
+  // Border
+  'radius': (
+    property: border-radius,
+    class: radius,
+    values: $radius,
+  ),
+  'radius-top': (
+    property: border-top-left-radius border-top-right-radius,
+    class: radius-t,
+    values: $radius,
+  ),
+  'radius-right': (
+    property: border-top-right-radius border-bottom-right-radius,
+    class: radius-r,
+    values: $radius,
+  ),
+  'radius-bottom': (
+    property: border-bottom-left-radius border-bottom-right-radius,
+    class: radius-b,
+    values: $radius,
+  ),
+  'radius-left': (
+    property: border-top-left-radius border-bottom-left-radius,
+    class: radius-l,
+    values: $radius,
+  ),
+  'radius-top-left': (
+    property: border-top-left-radius,
+    class: radius-tl,
+    values: $radius,
+  ),
+  'radius-top-right': (
+    property: border-top-right-radius,
+    class: radius-tr,
+    values: $radius,
+  ),
+  'radius-bottom-right': (
+    property: border-bottom-right-radius,
+    class: radius-br,
+    values: $radius,
+  ),
+  'radius-bottom-left': (
+    property: border-bottom-left-radius,
+    class: radius-bl,
+    values: $radius,
+  ),
+  // Text
+  'text-align': (
+    property: text-align,
+    class: text,
+    values: left right center justify start end,
+  ),
+  'text-decoration': (
+    property: text-decoration,
+    class: text-decoration,
+    values: line-through none overline underline,
+  ),
+  'white-space': (
+    property: white-space,
+    class: text,
+    values: (
+      wrap: normal,
+      no-wrap: nowrap,
+      pre: pre,
+      pre-line: pre-line,
+      pre-wrap: pre-wrap,
+    ),
+  ),
+  'overflow-wrap': (
+    property: overflow-wrap word-break,
+    // word-break for IE & < Edge 18
+    class: text,
+    values: (
+      break: break-word,
+    ),
+  ),
+  'text-overflow': (
+    property: white-space overflow text-overflow,
+    class: text,
+    values: (
+      truncate: nowrap hidden ellipsis,
+    ),
+  ),
+  'text-transform': (
+    property: text-transform,
+    class: text,
+    values: none capitalize lowercase uppercase,
+  ),
+  'object-fit': (
+    property: object-fit,
+    values: contain cover fill none scale-down,
+  ),
+  'object-position': (
+    property: object-position,
+    values: center top left right,
+  ),
+  'width': (
+    property: width,
+    values: map-merge(
+      $size-precent,
+      (
+        auto: auto,
+      )
+    ),
+  ),
+  'height': (
+    property: height,
+    values: map-merge(
+      $size-precent,
+      (
+        auto: auto,
+      )
+    ),
+  ),
+  'font-size': (
+    property: font-size,
+    class: font,
+    values: $font-size,
+  ),
+  'font-weight': (
+    property: font-weight,
+    class: font,
+    values: $font-weights,
+  ),
+  'color': (
+    property: color,
+    values: $colors-var,
+  ),
+  'background-color': (
+    property: background-color,
+    class: bg,
+    values: $colors-var,
+  ),
+);

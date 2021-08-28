@@ -1,0 +1,24 @@
+
+$colors: () !default;
+$colors: map-merge((
+  primary: #333333,
+  secondary: #333333,
+  info: #03a9f4,
+  success: #4caf50,
+  warn: #ff9800,
+  error: #F44336,
+  gray: gray,
+  black: #222222,
+  disable: #dddddd,
+), $colors);
+
+$colors-var: ();
+
+@each $key, $value in $colors {
+  $colors-var: map-merge($colors-var, ($key: var(--#{$key}-color)));
+}
+:root {
+  @each $key, $value in $colors {
+    --#{$key}-color: #{$value};
+  }
+}

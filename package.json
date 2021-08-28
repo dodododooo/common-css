@@ -1,0 +1,15 @@
+{
+  "name": "common-css",
+  "version": "1.0.0",
+  "description": "common css",
+  "main": "common.css",
+  "style": "common.css",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "start": "node start.js"
+  },
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

@@ -1,0 +1,26 @@
+@import 'colors';
+@import 'variables';
+@import 'property';
+
+@each $key, $property in $propertys {
+  $values: map-get($property, values);
+  @if type-of($values) == "string" or type-of(nth($values, 1)) != "list" {
+    $values: zip($values, $values)
+  }
+  $property-names: map-get($property, property);
+  @if type-of($property-names) == 'string' {
+    $property-names: append((), $property-names)
+  }
+  $property-class: map-get($property, class);
+  $property-class: if($property-class, $property-class, $key);
+
+  @each $k, $v in $values {
+    .#{$property-class}-#{$k} {
+      @for $i from 1 through length($property-names) {
+        $p: nth($property-names, $i);
+        #{$p}: if(type-of($v) == 'list' and length($property-names) == length($v), nth($v, $i), $v);
+      }
+    }
+  }
+}
+
