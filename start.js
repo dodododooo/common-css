@@ -1,8 +1,7 @@
 const sass = require('node-sass');
 const fs = require('fs');
 const dist_file = process.env.NODE_ENV == 'production' ? 'common-css.css' : 'common-css-dev.css';
-const outputStyle =
-  process.env.NODE_ENV == 'production' ? 'compressed' : 'expanded';
+const outputStyle = process.env.NODE_ENV == 'production' ? 'compressed' : 'expanded';
 sass.render(
   {
     file: './main.scss',
