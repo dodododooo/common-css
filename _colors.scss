@@ -7,9 +7,9 @@ $colors: map-merge((
   success: #4caf50,
   warn: #ff9800,
   error: #F44336,
+  dark: #000000,
+  light: #dddddd,
   gray: gray,
-  black: #222222,
-  disable: #dddddd,
 ), $colors);
 
 $colors-var: ();

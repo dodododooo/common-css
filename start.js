@@ -5,7 +5,7 @@ const outputStyle = process.env.NODE_ENV == 'production' ? 'compressed' : 'expan
 sass.render(
   {
     file: './main.scss',
-    outputStyle, // compressed
+    outputStyle,
   },
   function (err, result) {
     if (!err) {

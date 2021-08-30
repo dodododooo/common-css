@@ -321,7 +321,7 @@ $propertys: (
     property: white-space overflow text-overflow,
     class: text,
     values: (
-      truncate: nowrap hidden ellipsis,
+      ellipsis: nowrap hidden ellipsis,
     ),
   ),
   'text-transform': (

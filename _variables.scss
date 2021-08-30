@@ -1,22 +1,22 @@
-$spacer: 4px !default;
+$spacer-base: 4px !default;
 $spacer-range: 16 !default;
 $spacers: () !default;
 
 @if (type-of($spacers) == list) {
   @for $i from 0 through $spacer-range {
-    $spacers: map-merge($spacers, ($i: $spacer * $i));
+    $spacers: map-merge($spacers, ($i: $spacer-base * $i));
   }
 }
 
-$border-radius-root: 4px !default;
+$border-radius-base: 4px !default;
 $radius: () !default;
 $radius: map-merge(
   (
     0: 0,
-    'sm': $border-radius-root / 2,
-    null: $border-radius-root,
-    'lg': $border-radius-root * 2,
-    'xl': $border-radius-root * 6,
+    'sm': $border-radius-base / 2,
+    null: $border-radius-base,
+    'lg': $border-radius-base * 2,
+    'xl': $border-radius-base * 6,
     'pill': 9999px,
     'circle': 50%
   ),
@@ -29,18 +29,18 @@ $size-precent: () !default;
 @if (type-of($size-precent) == list) {
   @for $i from 1 through 100/$size-precent-step {
     $v: $size-precent-step * $i;
-    $size-precent: map-merge($size-precent, ($v: $v + '%'));
+    $size-precent: map-merge($size-precent, ($v: $v * 1%));
   }
 }
 
 $font-size-step: 2 !default;
-$font-size: () !default;
 $font-size-range: 16 !default;
+$font-size: () !default;
 
 @if (type-of($font-size) == list) {
   @for $i from 5 through $font-size-range {
     $v: $font-size-step * $i;
-    $font-size: map-merge($font-size, ($v: $v + 'px'));
+    $font-size: map-merge($font-size, ($v: $v * 1px));
   }
 }
 

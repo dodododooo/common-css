@@ -1,11 +1,16 @@
 {
   "name": "common-css",
-  "version": "1.0.0",
+  "version": "0.0.1-beta.1",
   "description": "common css",
   "main": "common.css",
   "style": "common.css",
-  "author": "",
+  "author": "dodododooo",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dodododooo/common-css.git"
+  },
+  "keywords": ["css", "common css", "common-css"],
   "scripts": {
     "start": "node start.js NODE_ENV=development",
     "build": "node start.js NODE_ENV=production"
