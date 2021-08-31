@@ -15,7 +15,11 @@ $border-color-deafult: var(--color-light) !default;
     .border { border-width: 0.333333px }
 }
 
-@each $key, $value in $colors-var {
+$border-color: () !default;
+
+$border-color: map-merge($colors-var, $border-color);
+
+@each $key, $value in $border-color {
   .border-#{$key} {
     border-color: $value;
   }
