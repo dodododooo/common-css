@@ -1,6 +1,7 @@
 @import 'colors';
 @import 'variables';
 @import 'property';
+@import 'border';
 
 @each $key, $property in $propertys {
   $values: map-get($property, values);
