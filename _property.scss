@@ -1,5 +1,5 @@
 $propertys: () !default;
-$propertys: map-deep-merge((
+$propertys: map-merge((
   // Display utilities
   'overflow': (
     property: overflow,

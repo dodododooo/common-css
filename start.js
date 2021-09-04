@@ -1,6 +1,7 @@
 const sass = require('node-sass');
 const fs = require('fs');
-const pruduction = process.env.NODE_ENV == 'production';
+const production = process.argv[2] == 'production';
+
 sass.render(
   {
     file: './main.scss',
@@ -19,7 +20,7 @@ sass.render(
   }
 );
 
-if (pruduction) {
+if (production) {
   sass.render(
     {
       file: './main.scss',

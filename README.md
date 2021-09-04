@@ -6,9 +6,14 @@ common-css是一个常用css样式库，使用scss编写，灵感来源于[vueti
 ## 使用  
 ### npm
 > npm install common-css  
+> import common-css/common.css  
+> 或 import common-css/main.scss  
+
 ### download
 > https://github.com/dodododooo/common.css
 ## 自定义
+使用scss文件时可自定义一些属性值  
+可自定义属性见下表
 
 |  变量名称  |    说明    |  类型  |  默认值  |
 |   ----   |    ----    |  ----  |  ----  |
@@ -30,4 +35,10 @@ common-css是一个常用css样式库，使用scss编写，灵感来源于[vueti
 > padding和margin的生成范围为 $spacer-base * $spacer-range 详见 _variables.scss  
 > font-size的生成范围为 $font-size-range * font-size-range 详见 _variables.scss  
 
+## 说明
+* 所有的颜色值都会生成root级的css变量，可据此做动态主题  
+* 所有样式见[common.dev.css](https://github.com/dodododooo/common-css/blob/master/common.dev.css)
+
+## license
+### MIT
 

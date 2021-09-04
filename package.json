@@ -12,8 +12,8 @@
   },
   "keywords": ["css", "common css", "common-css"],
   "scripts": {
-    "start": "node start.js NODE_ENV=development",
-    "build": "node start.js NODE_ENV=production"
+    "start": "node start.js development",
+    "build": "node start.js production"
   },
   "dependencies": {
     "node-sass": "^6.0.1"
