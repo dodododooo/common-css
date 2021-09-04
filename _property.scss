@@ -1,4 +1,5 @@
-$propertys: (
+$propertys: () !default;
+$propertys: map-deep-merge((
   // Display utilities
   'overflow': (
     property: overflow,
@@ -374,4 +375,4 @@ $propertys: (
     class: bg,
     values: $colors-var,
   ),
-);
+), $propertys);

@@ -8,38 +8,38 @@ $spacers: () !default;
   }
 }
 
-$border-radius-base: 4px !default;
+$radius-base: 4px !default;
 $radius: () !default;
 $radius: map-merge(
   (
     0: 0,
-    'sm': $border-radius-base / 2,
-    null: $border-radius-base,
-    'lg': $border-radius-base * 2,
-    'xl': $border-radius-base * 6,
+    'sm': $radius-base / 2,
+    null: $radius-base,
+    'lg': $radius-base * 2,
+    'xl': $radius-base * 6,
     'pill': 9999px,
     'circle': 50%
   ),
   $radius
 );
 
-$size-precent-step: 10 !default;
+$size-precent-base: 10 !default;
 $size-precent: () !default;
 
 @if (type-of($size-precent) == list) {
-  @for $i from 1 through 100/$size-precent-step {
-    $v: $size-precent-step * $i;
+  @for $i from 1 through 100/$size-precent-base {
+    $v: $size-precent-base * $i;
     $size-precent: map-merge($size-precent, ($v: $v * 1%));
   }
 }
 
-$font-size-step: 2 !default;
+$font-size-base: 2 !default;
 $font-size-range: 16 !default;
 $font-size: () !default;
 
 @if (type-of($font-size) == list) {
   @for $i from 5 through $font-size-range {
-    $v: $font-size-step * $i;
+    $v: $font-size-base * $i;
     $font-size: map-merge($font-size, ($v: $v * 1px));
   }
 }
