@@ -5,12 +5,12 @@ common-css是一个常用css样式库，使用scss编写，灵感来源于[vueti
 
 ## 使用  
 ### npm
-> npm install common-css  
-> import common-css/common.css  
-> 或 import common-css/main.scss  
+> npm install my-common-css  
+> import my-common-css/common.css  
+> 或 import my-common-css/main.scss  
 
 ### download
-> https://github.com/dodododooo/common.css
+> https://github.com/dodododooo/common-css/blob/master/common.css
 ## 自定义
 使用scss文件时可自定义一些属性值  
 可自定义属性见下表

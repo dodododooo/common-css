@@ -1,7 +1,7 @@
 {
-  "name": "common-css",
+  "name": "my-common-css",
   "version": "0.0.1",
-  "description": "common css",
+  "description": "my common css",
   "main": "common.css",
   "style": "common.css",
   "author": "dodododooo",
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://github.com/dodododooo/common-css.git"
   },
-  "keywords": ["css", "common css", "common-css"],
+  "keywords": ["css", "common css", "common-css", "my-common-css"],
   "scripts": {
     "start": "node start.js development",
     "build": "node start.js production"
