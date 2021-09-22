@@ -31,6 +31,7 @@ common-css是一个常用css样式库，使用scss编写，灵感来源于[vueti
 | $colors  | 自定义color | map | () |
 | $border-color-deafult  | 默认border颜色 | color | var(--color-light) |
 | $propertys  | 自定义属性 | map | () |
+| $color-prefix  | 色彩变量前缀 | string | color |
 
 > padding和margin的生成范围为 $spacer-base * $spacer-range 详见 _variables.scss  
 > font-size的生成范围为 $font-size-range * font-size-range 详见 _variables.scss  
