@@ -1,6 +1,6 @@
 {
   "name": "my-common-css",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "my common css",
   "main": "common.css",
   "style": "common.css",
@@ -12,7 +12,7 @@
   },
   "keywords": ["css", "common css", "common-css", "my-common-css"],
   "scripts": {
-    "start": "node start.js development",
+    "dev": "node start.js development",
     "build": "node start.js production"
   },
   "dependencies": {

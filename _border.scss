@@ -1,18 +1,29 @@
 $border-color-deafult: var(--color-light) !default;
 
-.border {
-  border: {
-    style: solid;
-    width: 1px;
-    color: $border-color-deafult;
+$borders: (
+  border: border,
+  border-t: border-top,
+  border-r: border-right,
+  border-b: border-bottom,
+  border-l: border-left
+);
+
+@each $key, $value in $borders {
+  .#{$key} {
+    #{$value}: {
+      style: solid;
+      width: 1px;
+      color: $border-color-deafult;
+    }
   }
 }
 
+
 @media screen and (-webkit-min-device-pixel-ratio: 2) {
-    .border { border-width: 0.5px }
+  .border, .border-t, .border-r, .border-b, .border-l { border-width: 0.5px }
 }
 @media screen and (-webkit-min-device-pixel-ratio: 3) {
-    .border { border-width: 0.333333px }
+  .border, .border-t, .border-r, .border-b, .border-l { border-width: 0.333333px }
 }
 
 $border-color: () !default;
@@ -20,7 +31,7 @@ $border-color: () !default;
 $border-color: map-merge($colors-var, $border-color);
 
 @each $key, $value in $border-color {
-  .border-#{$key} {
+  .border-color-#{$key} {
     border-color: $value;
   }
 }
