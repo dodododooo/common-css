@@ -1,5 +1,6 @@
 
 $colors: () !default;
+$color-prefix: color !default;
 $colors: map-merge((
   primary: #333333,
   secondary: #666666,
@@ -15,10 +16,10 @@ $colors: map-merge((
 $colors-var: ();
 
 @each $key, $value in $colors {
-  $colors-var: map-merge($colors-var, ($key: var(--color-#{$key})));
+  $colors-var: map-merge($colors-var, ($key: var(--#{$color-prefix}-#{$key})));
 }
 :root {
   @each $key, $value in $colors {
-    --color-#{$key}: #{$value};
+    --#{$color-prefix}-#{$key}: #{$value};
   }
 }
