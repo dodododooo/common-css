@@ -10,7 +10,7 @@ $colors: map-merge((
   error: #F44336,
   dark: #000000,
   light: #dddddd,
-  gray: gray,
+  'gray': gray,
 ), $colors);
 
 $colors-var: ();

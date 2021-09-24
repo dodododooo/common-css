@@ -45,13 +45,11 @@
     border-width: 0.5px;
   }
 }
-
 @media screen and (-webkit-min-device-pixel-ratio: 3) {
   .border, .border-t, .border-r, .border-b, .border-l {
     border-width: 0.333333px;
   }
 }
-
 .border-color-primary {
   border-color: var(--color-primary);
 }

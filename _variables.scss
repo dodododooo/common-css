@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $spacer-base: 4px !default;
 $spacer-range: 16 !default;
 $spacers: () !default;
@@ -13,7 +15,7 @@ $radius: () !default;
 $radius: map-merge(
   (
     0: 0,
-    'sm': $radius-base / 2,
+    'sm': math.div($radius-base, 2),
     null: $radius-base,
     'lg': $radius-base * 2,
     'xl': $radius-base * 6,
@@ -27,7 +29,7 @@ $size-precent-base: 10 !default;
 $size-precent: () !default;
 
 @if (type-of($size-precent) == list) {
-  @for $i from 1 through 100/$size-precent-base {
+  @for $i from 1 through math.div(100, $size-precent-base) {
     $v: $size-precent-base * $i;
     $size-precent: map-merge($size-precent, ($v: $v * 1%));
   }

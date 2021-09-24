@@ -1,6 +1,6 @@
 {
   "name": "my-common-css",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "my common css",
   "main": "common.css",
   "style": "common.css",
@@ -10,12 +10,17 @@
     "type": "git",
     "url": "https://github.com/dodododooo/common-css.git"
   },
-  "keywords": ["css", "common css", "common-css", "my-common-css"],
+  "keywords": [
+    "css",
+    "common css",
+    "common-css",
+    "my-common-css"
+  ],
   "scripts": {
     "dev": "node start.js development",
     "build": "node start.js production"
   },
   "dependencies": {
-    "node-sass": "^6.0.1"
+    "sass": "^1.42.1"
   }
 }
