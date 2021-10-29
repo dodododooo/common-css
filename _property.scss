@@ -4,14 +4,17 @@ $propertys: map-merge((
   'overflow': (
     property: overflow,
     values: auto hidden visible,
+    important: true,
   ),
   'overflow-x': (
     property: overflow-x,
     values: auto hidden,
+    important: true,
   ),
   'overflow-y': (
     property: overflow-y,
     values: auto hidden,
+    important: true,
   ),
   'display': (
     property: display,
@@ -132,167 +135,184 @@ $propertys: map-merge((
   'margin': (
     property: margin,
     class: ma,
-    values:
-      map-merge(
-        $spacers,
-        (
-          auto: auto,
-        )
-      ),
+    values: map-merge(
+      $spacers,
+      (
+        auto: auto,
+      )
+    ),
+    important: true,
   ),
   'margin-x': (
     property: margin-right margin-left,
     class: mx,
-    values:
-      map-merge(
-        $spacers,
-        (
-          auto: auto,
-        )
-      ),
+    values: map-merge(
+      $spacers,
+      (
+        auto: auto,
+      )
+    ),
+    important: true,
   ),
   'margin-y': (
     property: margin-top margin-bottom,
     class: my,
-    values:
-      map-merge(
-        $spacers,
-        (
-          auto: auto,
-        )
-      ),
+    values: map-merge(
+      $spacers,
+      (
+        auto: auto,
+      )
+    ),
+    important: true,
   ),
   'margin-top': (
     property: margin-top,
     class: mt,
-    values:
-      map-merge(
-        $spacers,
-        (
-          auto: auto,
-        )
-      ),
+    values: map-merge(
+      $spacers,
+      (
+        auto: auto,
+      )
+    ),
+    important: true,
   ),
   'margin-right': (
     property: margin-right,
     class: mr,
-    values:
-      map-merge(
-        $spacers,
-        (
-          auto: auto,
-        )
-      ),
+    values: map-merge(
+      $spacers,
+      (
+        auto: auto,
+      )
+    ),
+    important: true,
   ),
   'margin-bottom': (
     property: margin-bottom,
     class: mb,
-    values:
-      map-merge(
-        $spacers,
-        (
-          auto: auto,
-        )
-      ),
+    values: map-merge(
+      $spacers,
+      (
+        auto: auto,
+      )
+    ),
+    important: true,
   ),
   'margin-left': (
     property: margin-left,
     class: ml,
-    values:
-      map-merge(
-        $spacers,
-        (
-          auto: auto,
-        )
-      ),
+    values: map-merge(
+      $spacers,
+      (
+        auto: auto,
+      )
+    ),
+    important: true,
   ),
   // Padding utilities
   'padding': (
     property: padding,
     class: pa,
     values: $spacers,
+    important: true,
   ),
   'padding-x': (
     property: padding-right padding-left,
     class: px,
     values: $spacers,
+    important: true,
   ),
   'padding-y': (
     property: padding-top padding-bottom,
     class: py,
     values: $spacers,
+    important: true,
   ),
   'padding-top': (
     property: padding-top,
     class: pt,
     values: $spacers,
+    important: true,
   ),
   'padding-right': (
     property: padding-right,
     class: pr,
     values: $spacers,
+    important: true,
   ),
   'padding-bottom': (
     property: padding-bottom,
     class: pb,
     values: $spacers,
+    important: true,
   ),
   'padding-left': (
     property: padding-left,
     class: pl,
     values: $spacers,
+    important: true,
   ),
   // Border
   'radius': (
     property: border-radius,
     class: radius,
     values: $radius,
+    important: true,
   ),
   'radius-top': (
     property: border-top-left-radius border-top-right-radius,
     class: radius-t,
     values: $radius,
+    important: true,
   ),
   'radius-right': (
     property: border-top-right-radius border-bottom-right-radius,
     class: radius-r,
     values: $radius,
+    important: true,
   ),
   'radius-bottom': (
     property: border-bottom-left-radius border-bottom-right-radius,
     class: radius-b,
     values: $radius,
+    important: true,
   ),
   'radius-left': (
     property: border-top-left-radius border-bottom-left-radius,
     class: radius-l,
     values: $radius,
+    important: true,
   ),
   'radius-top-left': (
     property: border-top-left-radius,
     class: radius-tl,
     values: $radius,
+    important: true,
   ),
   'radius-top-right': (
     property: border-top-right-radius,
     class: radius-tr,
     values: $radius,
+    important: true,
   ),
   'radius-bottom-right': (
     property: border-bottom-right-radius,
     class: radius-br,
     values: $radius,
+    important: true,
   ),
   'radius-bottom-left': (
     property: border-bottom-left-radius,
     class: radius-bl,
     values: $radius,
+    important: true,
   ),
   // Text
   'text-align': (
     property: text-align,
     class: text,
     values: left right center justify start end,
+    important: true,
   ),
   'text-decoration': (
     property: text-decoration,
@@ -346,6 +366,7 @@ $propertys: map-merge((
         auto: auto,
       )
     ),
+    important: true,
   ),
   'height': (
     property: height,
@@ -355,24 +376,29 @@ $propertys: map-merge((
         auto: auto,
       )
     ),
+    important: true,
   ),
   'font-size': (
     property: font-size,
     class: font,
     values: $font-size,
+    important: true,
   ),
   'font-weight': (
     property: font-weight,
     class: font,
     values: $font-weights,
+    important: true,
   ),
   'color': (
     property: color,
     values: $colors-var,
+    important: true,
   ),
   'background-color': (
     property: background-color,
     class: bg,
     values: $colors-var,
+    important: true,
   ),
 ), $propertys);

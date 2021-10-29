@@ -9,6 +9,7 @@
     $values: zip($values, $values)
   }
   $property-names: map-get($property, property);
+  $important: if(map-get($property, important), !important, null);
   @if type-of($property-names) == 'string' {
     $property-names: append((), $property-names)
   }
@@ -20,7 +21,7 @@
     .#{$property-class}#{$class-modifier} {
       @for $i from 1 through length($property-names) {
         $p: nth($property-names, $i);
-        #{$p}: if(type-of($v) == 'list' and length($property-names) == length($v), nth($v, $i), $v);
+        #{$p}: if(type-of($v) == 'list' and length($property-names) == length($v), nth($v, $i), $v) + $important;
       }
     }
   }
