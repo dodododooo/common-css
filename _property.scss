@@ -401,4 +401,8 @@ $propertys: map-merge((
     values: $colors-var,
     important: true,
   ),
+  'cursor': (
+    property: cursor,
+    values: auto pointer crosshair move e-resize ne-resize nw-resize n-resize se-resize sw-resize s-resize w-resize text wait help,
+  )
 ), $propertys);
