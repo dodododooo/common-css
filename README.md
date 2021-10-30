@@ -3,6 +3,8 @@
 ## 简介  
 common-css是一个常用css样式库，使用scss编写，灵感来源于[vuetify](https://vuetifyjs.com/zh-Hans/getting-started/installation/).  
 
+## 使用文档
+[https://dodododooo.github.io/common-css/]
 ## 使用  
 ### npm
 > npm install my-common-css  
@@ -38,7 +40,7 @@ common-css是一个常用css样式库，使用scss编写，灵感来源于[vueti
 
 ## 说明
 * 所有的颜色值都会生成root级的css变量，可据此做动态主题  
-* 所有样式见[common.dev.css](https://github.com/dodododooo/common-css/blob/master/common.dev.css)
+* 所有样式见 [https://dodododooo.github.io/common-css/]
 
 ## license
 ### MIT
