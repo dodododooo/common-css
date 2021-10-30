@@ -31,6 +31,8 @@ if (production) {
         fs.writeFile('./common.css', result.css, function (err) {
           if (err) {
             console.log(err);
+          } else {
+            writeJson();
           }
         });
       } else {
@@ -38,4 +40,21 @@ if (production) {
       }
     }
   );
+}
+
+function writeJson() {
+  fs.readFile('./common.dev.css', function(error, data) {
+    if (error) {
+      console.log(error);
+      return;
+    }
+    try {
+      let str = data.toString();
+      let arr = str.match(/.*\{(.*\n*\s)*?\}/ig);
+      fs.writeFileSync('./css-json.js', `var cssJsonArr = ${JSON.stringify(arr)}`);
+    } catch (error) {
+      console.log(error);
+      return;
+    }
+  })
 }

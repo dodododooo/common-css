@@ -11,6 +11,7 @@ $colors: map-merge((
   dark: #000000,
   light: #dddddd,
   'gray': gray,
+  'white': #ffffff,
 ), $colors);
 
 $colors-var: ();

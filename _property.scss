@@ -53,6 +53,7 @@ $propertys: map-merge((
       grow-0: 0,
       grow-1: 1,
     ),
+    important: true,
   ),
   'flex-shrink': (
     property: flex-shrink,
@@ -61,6 +62,7 @@ $propertys: map-merge((
       shrink-0: 0,
       shrink-1: 1,
     ),
+    important: true,
   ),
   'flex-wrap': (
     property: flex-wrap,

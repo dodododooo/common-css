@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>common-css</title>
+  <link rel="stylesheet" href="common.dev.css">
+  <script src="./css-json.js"></script>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }
+    pre {
+      margin-bottom: 24px;
+      font-size: 16px;
+    }
+    .css-pre:hover {
+      color: #aba1a1;
+    }
+    #search-input {
+      border: none;
+      outline: none;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="d-flex align-stretch pa-6 width-100 height-100 overflow-hidden bg-primary">
+    <div class="d-flex flex-column align-stretch mr-6 width-50">
+      <p class="text-center color-white font-32 mb-4">MY-COMMON-CSS</p>
+      <input type="text" placeholder="请输入样式名称" id="search-input" class="py-2 px-4 radius color-primary mb-6">
+      <p class="color-white mb-4">搜索结果：</p>
+      <div class="flex-grow-1 overflow-hidden border border-gray radius bg-primary color-white pa-6">
+        <div id="search-box" class="height-100 overflow-y-auto"></div>
+      </div>
+    </div>
+    <div class="width-50 d-flex flex-column align-stretch">
+      <p class="color-white mb-4">所有样式：</p>
+      <div class="flex-grow-1 overflow-hidden border border-gray radius bg-primary color-white pa-6">
+        <div id="css-box" class="height-100 overflow-y-auto"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    let timer = null;
+    let t = 0;
+    let findIndex = -1;
+
+    let cssBox = document.querySelector('#css-box');
+    let searchInput = document.querySelector('#search-input');
+    let searchBox = document.querySelector('#search-box');
+    // cssJsonArr
+    function addCssItem(cssArr, root, isSearchBox) {
+      let htmlStr = isSearchBox ? '<span id="search-top"></span>' : '';
+      for (let i = 0; i < cssArr.length; i++) {
+        const item = cssArr[i];
+        htmlStr += `<pre ${!isSearchBox ? 'id=css-line-' + i : ''} class="css-pre">${item}</pre>`; document.createElement('pre');
+        root.innerHTML = htmlStr;
+      }
+    }
+    function scrollToCssLine() {
+      document.querySelector(`#css-line-${findIndex}`).scrollIntoView();
+      document.querySelector(`#search-top`).scrollIntoView();
+    }
+    function findCssItem(str, time) {
+      if (!str) return;
+      let arr = [];
+      for (let i = 0; i < cssJsonArr.length; i++) {
+        if (time != t) return;
+        const item = cssJsonArr[i];
+        if (item.indexOf(str) > -1) {
+          findIndex = findIndex == -1 ? i : findIndex;
+          arr.push(item);
+        }
+      }
+      if (arr.length == 0) arr.push('没有搜到!!!');
+      addCssItem(arr, searchBox, true);
+      scrollToCssLine();
+    }
+    function searchInputHandler(e) {
+      if (timer) {
+        clearTimeout(timer);
+        timer = null;
+      }
+      timer = setTimeout(() => {
+        t = Date.now();
+        findIndex = -1;
+        findCssItem(e.target.value, t);
+      }, 500);
+    }
+
+    addCssItem(cssJsonArr, cssBox, false);
+    searchInput.addEventListener('input', searchInputHandler);
+  </script>
+</body>
+</html>
